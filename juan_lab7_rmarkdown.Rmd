@@ -20,3 +20,15 @@ we are asking: is there a significant difference in recommended gun control acti
 
 
 Hey Juan, how is it going? :) 
+
+
+Juan: Data wrangling and counts
+
+chi sqaure: are proportions across groups so different that there is a significant difference
+
+```{r}
+get_guns <- gc_df %>% 
+  filter(gender != "NA", make_get_guns != "NA") %>% 
+  count(gender, make_get_guns) 
+```
+
